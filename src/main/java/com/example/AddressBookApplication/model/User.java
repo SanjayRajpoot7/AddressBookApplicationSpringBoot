@@ -8,23 +8,16 @@ import jakarta.persistence.Id;
 
 @Entity
 public class User {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-generate the ID
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private String firstName;
+    private String lastName;
     private String email;
 
-    // Default constructor, getters, setters (can use Lombok to generate them)
-    public User() {}
+    // Getters and Setters (or use Lombok to generate them)
 
-    public User(String name, String email) {
-        this.name = name;
-        this.email = email;
-    }
-
-    // Getters and Setters (use Lombok or manually)
     public Long getId() {
         return id;
     }
@@ -33,12 +26,20 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -49,4 +50,3 @@ public class User {
         this.email = email;
     }
 }
-
