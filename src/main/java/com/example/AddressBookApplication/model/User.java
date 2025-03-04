@@ -8,16 +8,14 @@ import jakarta.persistence.Id;
 
 @Entity
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
+    @Id
+    private Long id;
     private String firstName;
     private String lastName;
     private String email;
 
-    // Getters and Setters (or use Lombok to generate them)
-
+    // Getters and setters
     public Long getId() {
         return id;
     }
